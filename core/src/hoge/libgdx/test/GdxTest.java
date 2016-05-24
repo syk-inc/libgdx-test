@@ -9,11 +9,13 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 public class GdxTest extends ApplicationAdapter {
 	SpriteBatch batch;
 	Texture img;
+	Texture img2;
 	
 	@Override
 	public void create () {
 		batch = new SpriteBatch();
 		img = new Texture("poop.png");
+		img2 = new Texture("poop2.png");
 	}
 
 	@Override
@@ -22,6 +24,7 @@ public class GdxTest extends ApplicationAdapter {
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 		batch.begin();
 		batch.draw(img, 0, 0);
+		batch.draw(img2, 500, 0);
 		batch.end();
 	}
 }
